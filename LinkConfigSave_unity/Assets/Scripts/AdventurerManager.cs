@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AdventurerManager : MonoBehaviour {
 
+  //public LoadSaveManager loadSave;
   //public static event Action OnAdventurerModified = delegate { };
   AdventurerConfig _config;
   private int numAdventurerSprites = 0;
@@ -17,11 +18,6 @@ public class AdventurerManager : MonoBehaviour {
     NextButton.OnNextRequested += NextButton_OnNextRequested;
     LoadSaveManager.OnConfigLoaded += LoadSaveManager_OnConfigLoaded;
     SaveButton.OnSaveRequested += SaveButton_OnSaveRequested;
-  }
-
-  private void Start()
-  {
-    
   }
 
   private void NextButton_OnNextRequested()
@@ -42,8 +38,9 @@ public class AdventurerManager : MonoBehaviour {
 
   private void LoadSaveManager_OnConfigLoaded( AdventurerConfig loadedConfig )
   {
-    Debug.Log("AdventurerManager heard about save request.");
-    gameObject.BroadcastMessage("ApplyAdventurerConfig", loadedConfig);
+    Debug.Log("AdventurerManager heard about Load request.");
+    /// change our config to match loadedConfig
+    gameObject.BroadcastMessage("ApplyAdventurerConfig", _config);
   }
 
 }

@@ -8,7 +8,7 @@ using Newtonsoft.Json;
 
 public class LoadSaveManager : MonoBehaviour {
 
-  public static event Action<AdventurerConfig> OnConfigLoaded = delegate { };
+  public static event Action<AdventurerConfig> OnConfigLoaded = delegate { }; // Shouting that new config loaded from disk
 
   private static LoadSaveManager _instance;
 

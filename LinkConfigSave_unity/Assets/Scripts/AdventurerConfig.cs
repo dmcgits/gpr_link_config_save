@@ -13,7 +13,7 @@ public class AdventurerConfig
     // go with defaults.
   }
 
-  public AdventurerConfig(string name, int pictureId)
+  public AdventurerConfig(string name, int pictureId=1)
   {
     // There are other ways to initialize public variables on objects
     // but I'll keep to what we know for now
