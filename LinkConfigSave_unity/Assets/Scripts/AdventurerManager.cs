@@ -32,15 +32,18 @@ public class AdventurerManager : MonoBehaviour {
   private void SaveButton_OnSaveRequested()
   {
     Debug.Log("AdventurerManager heard someone wants a save.");
-    // send out the config for saving
-    LoadSaveManager.Instance.Save(_config);
+		// send out the config for saving
+
+		LoadSaveManager.Instance.Save(_config);
+
   }
 
   private void LoadSaveManager_OnConfigLoaded( AdventurerConfig loadedConfig )
   {
     Debug.Log("AdventurerManager heard about Load request.");
-    /// change our config to match loadedConfig
-    gameObject.BroadcastMessage("ApplyAdventurerConfig", _config);
+		/// change our config to match loadedConfig
+	_config = loadedConfig;
+	gameObject.BroadcastMessage("ApplyAdventurerConfig", _config);
   }
 
 }

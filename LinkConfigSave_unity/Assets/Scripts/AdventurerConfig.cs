@@ -7,7 +7,7 @@ public class AdventurerConfig
 {
   public string name = "GRORGNAR";
   public int pictureId = 1;
-  
+
   public AdventurerConfig()
   {
     // go with defaults.

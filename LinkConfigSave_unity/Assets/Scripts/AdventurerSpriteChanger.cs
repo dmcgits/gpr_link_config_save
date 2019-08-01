@@ -18,7 +18,7 @@ public class AdventurerSpriteChanger : MonoBehaviour
     Debug.Log("Change to sprite: adventurer_" + config.pictureId);
     Sprite adventurerSprite = AtlasManager.Instance.GetSprite("adventurer", config.pictureId);
 
-    if (adventurerSprite != null)
+	if (adventurerSprite != null)
     {
       _spriteRenderer.sprite = adventurerSprite;
     } else
